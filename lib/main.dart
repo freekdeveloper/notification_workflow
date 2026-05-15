@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import "package:hooks_riverpod/hooks_riverpod.dart";
 import "package:notification_workflow/src/config/theme.dart";
-import "package:notification_workflow/src/features/notifications/ui/screens/notification_overview.dart";
 import "package:notification_workflow/src/localization/app_localizations.dart";
+import "package:notification_workflow/src/routing/router.dart";
 
 void main() {
   runApp(
@@ -12,15 +12,19 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-    title: "Notification Overview Demo",
-    theme: getTheme(),
-    localizationsDelegates: AppLocalizations.localizationsDelegates,
-    supportedLocales: AppLocalizations.supportedLocales,
-    home: const NotificationOverviewScreen(),
-  );
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+
+    return MaterialApp.router(
+      title: "Notification Overview Demo",
+      theme: getTheme(),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      routerConfig: router,
+    );
+  }
 }

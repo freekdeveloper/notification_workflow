@@ -15,5 +15,29 @@
     },
     "dateToday": "Vandaag",
     "dateYesterday": "Gisteren",
-    "dateEarlier": "Eerder"
+    "dateEarlier": "Eerder",
+    "notificationDetailTitle": "Melding {organization}",
+    "@notificationDetailTitle": {
+        "placeholders": {
+            "organization": {
+                "type": "String"
+            }
+        }
+    },
+    "notificationDetailNotFound": "Melding niet gevonden",
+    "notificationDetailTeamInbox": "Bericht uit team inbox",
+    "notificationDetailOpenWebsite": "Open in {organization}",
+    "@notificationDetailOpenWebsite": {
+        "placeholders": {
+            "organization": {
+                "type": "String"
+            }
+        }
+    },
+    "notificationDetailStatusOpen": "Nog niet opgepakt",
+    "notificationDetailStatusWorkingOn": "Opgepakt door jou",
+    "notificationDetailStatusCompleted": "Afgerond",
+    "notificationDetailPickUp": "Pak op",
+    "notificationDetailReleasePickUp": "Pak niet op",
+    "notificationDetailComplete": "Afronden"
 }

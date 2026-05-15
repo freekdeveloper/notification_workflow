@@ -14,7 +14,7 @@ ThemeData getTheme() => ThemeData(
     centerTitle: false,
     titleTextStyle: TextStyle(
       color: Colors.white,
-      fontSize: 22,
+      fontSize: 20,
       fontWeight: FontWeight.w500,
     ),
     iconTheme: IconThemeData(color: Colors.white),

@@ -15,5 +15,29 @@
     },
     "dateToday": "Today",
     "dateYesterday": "Yesterday",
-    "dateEarlier": "Earlier"
+    "dateEarlier": "Earlier",
+    "notificationDetailTitle": "Notification {organization}",
+    "@notificationDetailTitle": {
+        "placeholders": {
+            "organization": {
+                "type": "String"
+            }
+        }
+    },
+    "notificationDetailNotFound": "Notification not found",
+    "notificationDetailTeamInbox": "Message from team inbox",
+    "notificationDetailOpenWebsite": "Open in {organization}",
+    "@notificationDetailOpenWebsite": {
+        "placeholders": {
+            "organization": {
+                "type": "String"
+            }
+        }
+    },
+    "notificationDetailStatusOpen": "Not picked up yet",
+    "notificationDetailStatusWorkingOn": "Picked up by you",
+    "notificationDetailStatusCompleted": "Completed",
+    "notificationDetailPickUp": "Pick up",
+    "notificationDetailReleasePickUp": "Release",
+    "notificationDetailComplete": "Complete"
 }

@@ -37,3 +37,16 @@ final notificationsProvider =
     AsyncNotifierProvider<NotificationsNotifier, List<NotificationModel>>(
       NotificationsNotifier.new,
     );
+
+final notificationByIdProvider = Provider.family<NotificationModel?, String>((
+  ref,
+  id,
+) {
+  final list =
+      ref.watch(notificationsProvider).asData?.value ??
+      const <NotificationModel>[];
+  for (final notification in list) {
+    if (notification.id == id) return notification;
+  }
+  return null;
+});
