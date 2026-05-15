@@ -1,0 +1,19 @@
+{
+    "@@locale": "en",
+    "notificationOverviewTitle": "Notifications",
+    "notificationOverviewOpenTabTitle": "Open",
+    "notificationOverviewWorkingOnTabTitle": "In progress",
+    "notificationOverviewCompletedTabTitle": "Completed",
+    "notificationOverviewNoNotifications": "No notifications",
+    "notificationOverviewError": "Error: {error}",
+    "@notificationOverviewError": {
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "dateToday": "Today",
+    "dateYesterday": "Yesterday",
+    "dateEarlier": "Earlier"
+}

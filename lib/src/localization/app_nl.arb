@@ -1,0 +1,19 @@
+{
+    "@@locale": "nl",
+    "notificationOverviewTitle": "Meldingen",
+    "notificationOverviewOpenTabTitle": "Openstaand",
+    "notificationOverviewWorkingOnTabTitle": "Mee bezig",
+    "notificationOverviewCompletedTabTitle": "Afgerond",
+    "notificationOverviewNoNotifications": "Geen meldingen",
+    "notificationOverviewError": "Fout: {error}",
+    "@notificationOverviewError": {
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "dateToday": "Vandaag",
+    "dateYesterday": "Gisteren",
+    "dateEarlier": "Eerder"
+}

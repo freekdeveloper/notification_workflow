@@ -3,24 +3,26 @@ import "package:flutter_hooks/flutter_hooks.dart";
 import "package:hooks_riverpod/hooks_riverpod.dart";
 import "package:notification_workflow/src/features/notifications/models/notification.dart";
 import "package:notification_workflow/src/features/notifications/services/notification.dart";
+import "package:notification_workflow/src/localization/app_localizations.dart";
 
 class NotificationOverviewScreen extends HookConsumerWidget {
   const NotificationOverviewScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final localizations = AppLocalizations.of(context)!;
     final tabController = useTabController(initialLength: 3);
     final notificationItems = ref.watch(notificationsProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Meldingen"),
+        title: Text(localizations.notificationOverviewTitle),
         bottom: TabBar(
           controller: tabController,
-          tabs: const [
-            Tab(text: "Openstaand"),
-            Tab(text: "Mee bezig"),
-            Tab(text: "Afgerond"),
+          tabs: [
+            Tab(text: localizations.notificationOverviewOpenTabTitle),
+            Tab(text: localizations.notificationOverviewWorkingOnTabTitle),
+            Tab(text: localizations.notificationOverviewCompletedTabTitle),
           ],
         ),
       ),

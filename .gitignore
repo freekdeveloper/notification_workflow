@@ -47,3 +47,5 @@ app.*.map.json
 # Platforms that are not officially supported won't be maintained
 /macos
 /linux
+
+app_localizations*.dart
