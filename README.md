@@ -76,6 +76,15 @@ Routes are declared in [lib/src/routing/router.dart](lib/src/routing/router.dart
 [Riverpod](https://pub.dev/packages/hooks_riverpod) Services are exposed as `Provider`s and overridden in tests. Domain state lives in `AsyncNotifier`s (`NotificationsNotifier`). 
 
 
+## Testing
+
+```bash
+flutter analyze
+flutter test integration_test/
+```
+
+The integration test in [integration_test/app_test.dart](integration_test/app_test.dart) drives the app from `main()` through tapping a card, picking it up, and completing it. It assumes the device locale is English. CI runs analyze + integration test on every push and pull request — see [.github/workflows/ci.yml](.github/workflows/ci.yml).
+
 ## Release builds
 
 The Github Action will create a release build after all previous steps have succeeded. Currently this is done with a debugkey and your phone will recognize it as a new app and remove the data of the old app. This should be updated to use a signing key that is used by everyone.
