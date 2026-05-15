@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:hooks_riverpod/hooks_riverpod.dart";
-import "package:notification_workflow/src/features/notifications/screens/notification_overview.dart";
+import "package:notification_workflow/src/config/theme.dart";
+import "package:notification_workflow/src/features/notifications/ui/screens/notification_overview.dart";
 import "package:notification_workflow/src/localization/app_localizations.dart";
 
 void main() {
@@ -17,9 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
     title: "Notification Overview Demo",
-    theme: ThemeData(
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-    ),
+    theme: getTheme(),
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     home: const NotificationOverviewScreen(),
