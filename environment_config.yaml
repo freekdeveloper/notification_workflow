@@ -1,0 +1,10 @@
+environment_config:
+  path: src/config/environment_config.dart
+  class: EnvironmentConfig
+  dotenv_path: .env
+
+  fields:
+    USE_MOCK_NOTIFICATIONS:
+      default: "true"
+      dotenv: true
+      config_field: false

@@ -51,3 +51,5 @@ app.*.map.json
 /linux
 
 app_localizations*.dart
+
+.env

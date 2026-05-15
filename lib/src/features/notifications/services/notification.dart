@@ -1,5 +1,7 @@
 import "package:hooks_riverpod/hooks_riverpod.dart";
+import "package:notification_workflow/src/config/environment_config.dart";
 import "package:notification_workflow/src/features/notifications/models/notification.dart";
+import "package:notification_workflow/src/features/notifications/services/api_notification.dart";
 import "package:notification_workflow/src/features/notifications/services/mocked_notification.dart";
 
 abstract interface class NotificationService {
@@ -12,7 +14,9 @@ abstract interface class NotificationService {
 }
 
 final notificationServiceProvider = Provider<NotificationService>(
-  (ref) => MockNotificationService(),
+  (ref) => EnvironmentConfig.useMockNotifications
+      ? MockNotificationService()
+      : ApiNotificationService(),
 );
 
 class NotificationsNotifier extends AsyncNotifier<List<NotificationModel>> {

@@ -1,10 +1,13 @@
 import "package:flutter/material.dart";
+import "package:flutter_dotenv/flutter_dotenv.dart";
 import "package:hooks_riverpod/hooks_riverpod.dart";
 import "package:notification_workflow/src/config/theme.dart";
 import "package:notification_workflow/src/localization/app_localizations.dart";
 import "package:notification_workflow/src/routing/router.dart";
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load();
   runApp(
     const ProviderScope(
       child: MyApp(),

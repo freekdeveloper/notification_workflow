@@ -24,6 +24,7 @@ jobs:
                 cache: true
             - name: Project preparation
               run: flutter pub get
+            - run: dart run environment_config:generate
             - name: Dart format
               run: dart format -o none --set-exit-if-changed .
             - name: Flutter analyze
